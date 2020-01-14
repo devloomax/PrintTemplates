@@ -976,6 +976,7 @@ table.payments td.label {
 					{% endfor %}
 					<tr><td width="100%">Total Steuern</td><td id="receiptSaleTotalsTax" class="amount">{{Sale.taxTotal|money}}</td></tr>
 					<tr class="total"><td>Total</td><td id="receiptSaleTotalsTotal" class="amount">{{Sale.calcTotal|money}}</td></tr>
+					<tr style="color: gray; line-height: 20px;"><td><i>Total Euro</i></td><td id="receiptSaleTotalsTotal" class="amount"><i>€{{(Sale.calcTotal*0.93)|number_format(2)}}</i></td></tr>
 				</tbody>
 			</table>
 		{% endif %}
